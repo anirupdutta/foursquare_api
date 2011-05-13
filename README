@@ -1,0 +1,12 @@
+Foursquare is becoming very popular now days,so its obvious that we need a foursquare widget for elgg.
+So i divided the widget development project into two parts.
+First is the foursquare_api which exposes the foursquare api functions and allows a great level of administrative flexibility.
+To get it started you need to register a new application from foursquare at https://foursquare.com/oauth/ .
+After that you need to include the client ID and client secret in the settings page.
+Most of the other options on the settings page are self explanatory.
+
+The api endpoints exposed are for checkins,todos and venuehistory
+
+Demo at http://foursquare.heybuddy.in/
+
+Remember this works only for elgg 1.8.
