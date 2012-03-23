@@ -71,11 +71,19 @@ function foursquare_api_login($token) {
 			'access_key' => $details->response->user->id,
 			'access_secret' => $token->access_token,
 		),
-		'plugin_user_setting_name_value_pairs_operator' => 'OR',
+		plugin_user_setting_name_value_pairs_operator => 'OR',
 		'limit' => 0
 	);
 	
 	$users = elgg_get_entities_from_plugin_user_settings($options);
+	//echo count($users);
+	
+	/*$values = array(
+		'plugin:settings:foursquare_api:access_key' => $details->response->user->id,
+	);*/
+
+	//$users = get_entities_from_private_setting_multi($values, 'user', '', 0, '', 0);
+	
 
 	if ($users) {
 		if (count($users) == 1 && login($users[0])) {

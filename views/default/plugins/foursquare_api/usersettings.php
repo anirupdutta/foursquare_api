@@ -4,9 +4,9 @@
  */
 
 $user_id = elgg_get_logged_in_user_guid();
-$foursquare_name = get_plugin_usersetting('foursquare_name', $user_id, 'foursquare_api');
-$foursquare_id = get_plugin_usersetting('access_key', $user_id, 'foursquare_api');
-$access_secret = get_plugin_usersetting('access_secret', $user_id, 'foursquare_api');
+$foursquare_name = elgg_get_plugin_user_setting('foursquare_name', $user_id, 'foursquare_api');
+$foursquare_id = elgg_get_plugin_user_setting('access_key', $user_id, 'foursquare_api');
+$access_secret = elgg_get_plugin_user_setting('access_secret', $user_id, 'foursquare_api');
 
 $site_name = elgg_get_site_entity()->name;
 echo '<div>' . elgg_echo('foursquare_api:usersettings:description', array($site_name)) . '</div>';
